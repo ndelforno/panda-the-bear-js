@@ -64,3 +64,34 @@ submit.disabled = true
 aside = document.querySelector(".highlight")
 bio = document.querySelector(".bio-info")
 aside.removeChild(bio)
+
+part 2
+
+1.1
+timetravel = document.querySelectorAll(".bar-title")
+div = timetravel[2].parentElement
+toremove = div.parentElement
+toremove.remove()
+
+2.1
+pika = document.getElementById("right-image")
+dupNode = pika.cloneNode()
+port = document.querySelector(".portfolio-container")
+port.appendChild(dupNode)
+
+2.2
+for (var i=0; i < 10; i++){
+  dupNode = pika.cloneNode(".portfolio-container")
+  port.appendChild(dupNode)
+}
+
+2.3
+var listItem = document.createElement('li')
+var leftSpan = document.createElement('span')
+var lastUpdated = document.createTextNode('Page last updated on')
+leftSpan.appendChild(lastUpdated)
+var leftSpan = document.createElement('span')
+leftSpan.appendChild(lastUpdated)
+listItem.appendChild(leftSpan)
+ul = document.querySelector(".bio-info")
+ul.appendChild(listItem)
